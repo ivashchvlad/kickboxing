@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron {
+    position: relative;
+    height: 100vh;
+}
+
+.jumbotron_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.jumbotron_image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.jumbotron__title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: white;
+}
+
+.jumbotron__title h3 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 black;
+    font-size: calc(20px + 40*(100vw / 1280));
+}
+
+.jumbotron__title h1 {
+    text-transform: uppercase;
+    font-family: 'Holtwood One SC', serif;
+    text-shadow: 5px 5px 0 #bd1134;
+    font-size: calc(15px + 80*(100vw / 1280));
+}
+
+.jumbotron__title h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 10px black;
+}
+
+.about {
+    padding: 0 20px 0 20px;
+}
+
+.about__title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__title img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about__title h3 {
+    color: #e5b783;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(10px + 40*(100vw / 1280));
+}
+
+.about__title .bold-title {
+    color: #bd1134;
+    font-family: 'Teko', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: calc(10px + 40*(100vw / 1280));
+}
+
+.about__stars {
+    color: #032966;
+    font-size: 80px;
+}
+
+.about__stars::before, .about__stars::after {
+    content: '★';
+    font-size: 60px;
+}
+
+.about__content {
+    padding: 0 10% 5% 10%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.card__image {
+    height: 100%;
+    flex: 300px 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagecontainer {
+    height: 100%;
+    position: relative;
+}
+
+.card__image .overlay {
+    position: absolute;
+    transform: scale(1.08);
+    top: 0;
+    left: -10px;
+    z-index: -1;
+}
+
+.card__image img {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__content {
+    flex: 300px 1;
+    padding: 5% 2% 5% 2%;
+}
+
+.card__content h4 {
+    font-size: 30px;
+    color: #bd1134;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+}
+
+.card__content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.about__lines {
+    height: 200px;
+    width: 100%;
+    position: relative;
+}
+
+.lines__top {
+    position: absolute;
+    left: 25%;
+    height: 100px;
+    width: 10px;
+    background-color: #032966;
+}
+
+.lines__middle {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    height: 10px;
+    width: 75%;
+    background-color: #032966;
+}
+
+.lines__bottom {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    height: 100px;
+    width: 10px;
+    background-color: #032966;
+}
+
+.schedule {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #2f65bdc9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0 10%;
+}
+
+.schedule__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.schedule__background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    mix-blend-mode: screen;
+}
+
+.schedule__whitecard {
+    background-color: rgba(255, 255, 255, 0.644);
+    padding: 2%;
+}
+
+.schedule__title {
+    width: 100%;
+}
+
+.schedule__title h3 {
+    text-transform: uppercase;
+    font-family: 'Holtwood One SC', serif;
+    color: white;
+    text-align: center;
+    font-size: calc(20px + 20*(100vw / 1280));
+    text-shadow: 1px 1px 0 black;
+}
+
+.schedule__title h3 span {
+    color: #032966;
+}
+
+.schedule__title h3::before, .schedule__title h3::after {
+    content: '★';
+    font-size: calc(15px + 15*(100vw / 1280));
+    color: #032966;
+    margin: 0 10px 0 10px;
+}
+
+.schedule__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.scedule__block {
+    flex: 50% 1;
+    padding: 2% 2% 4% 2%;
+    position: relative;
+}
+
+.scedule__block h4 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #bd1134;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+}
+
+.scedule__block h4 span {
+    font-size: 28px;
+    color: #032966;
+}
+
+.scedule__block p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.dash {
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 100px;
+    background-color: white;
+}
+
+.schedule__button {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule__button button {
+    background-color: #bd1134;
+    border-radius: 40px;
+    border-color: transparent;
+    padding: 10px 40px 10px 40px;
+    color: white;
+    box-shadow: none;
+}
+
+.trainers {
+    width: 100%;
+    padding: 5vw 12% 5vw 12%;
+}
+
+.trainers__photo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trainers__photo img {
+    width: 35%;
+    height: auto;
+}
+
+.trainers__lines {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer__name {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid #032966;
+}
+
+.trainer__name:first-child {
+    border-right: 5px solid #032966;
+    ;
+}
+
+.trainer__name h4 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #bd1134;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+}
+
+.trainer__name h3 {
+    font-size: 35px;
+    color: #bd1134;
+    font-weight: 600;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+}
+
+.trainer__name p {
+    font-size: 26px;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    color: #032966;
+}
+
+@media (max-width:1366px){
+    .about__content{
+        padding: 0 5% 5% 5%;
+    }
+}
+
+@media (max-width:1000px){
+    .about__lines{
+        display: none;
+    }
+    .card {
+        margin-top: 20px;
+        flex-direction: column;
+        height: 100%;
+    }
+    .card__image {
+        flex: 1;
+        height: 280px;
+    }
+    .about__content {
+        flex: 1;
+    }
+    .card:last-child {
+        flex-direction: column-reverse;
+    }
+    .schedule {
+        padding: 0;
+        height: 100%;
+    }
+    .dash {
+        display: none;
+    }
+    .scedule__block {
+        flex: 100% 1;
+    }
+}
